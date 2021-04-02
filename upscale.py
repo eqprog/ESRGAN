@@ -164,7 +164,8 @@ class Upscale:
 
         images: List[Path] = []
         for ext in ["png", "jpg", "jpeg", "gif", "bmp", "tiff", "tga"]:
-            images.extend(input_folder.glob(f"**/*.{ext}"))
+            #images.extend(input_folder.glob(f"**/*.{ext}"))
+            images.extend(input_folder.glob(f"*.{ext}"))
 
         # Store the maximum split depths for each model in the chain
         # TODO: there might be a better way of doing this but it's good enough for now
